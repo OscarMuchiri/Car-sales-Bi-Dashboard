@@ -1,20 +1,28 @@
 # Car Sales Business Intelligence Dashboard
 
-A Power BI business-intelligence project for exploring vehicle-sales data and preparing decision-ready insights for areas such as inventory planning, customer segmentation, and targeted marketing.
+A Power BI business-intelligence project for exploring vehicle-sales data and turning it into decision-ready insights for inventory planning, customer segmentation, pricing, and marketing analysis.
 
-The repository contains the original Power BI dashboard file together with a cleaned, reproducible Python notebook that documents the data-preparation workflow used before analysis.
+![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?logo=powerbi&logoColor=black)
+![Python](https://img.shields.io/badge/Python-Data%20Preparation-3776AB?logo=python&logoColor=white)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+## Dashboard Preview
+
+![Car Sales Power BI Dashboard](dashboard_overview.png)
+
+The repository includes the final Power BI report together with a cleaned Python notebook that documents the data-preparation workflow.
 
 ---
 
-## Project objective
+## Project Objective
 
-The project is designed to turn a raw vehicle-sales dataset into a cleaner analytical dataset that can support dashboard reporting and business decision-making.
+The project transforms raw vehicle-sales data into an analytical dataset and interactive dashboard for business decision support.
 
 The source dataset used in the notebook contains:
 
 - **157 vehicle records**
 - **15 original columns**
-- vehicle manufacturer and model information
+- manufacturer and model information
 - sales volume
 - four-year resale value
 - vehicle type
@@ -26,45 +34,11 @@ The source dataset used in the notebook contains:
 
 ---
 
-## Repository structure
-
-```text
-Car-sales-Bi-Dashboard/
-├── data/
-│   └── README.md
-├── notebooks/
-│   └── car_sales_data_preparation.ipynb
-├── .gitignore
-├── LICENSE
-├── README.md
-├── car_sales_dashboard.pbix
-└── requirements.txt
-```
-
----
-
-## Power BI dashboard
-
-The original Power BI project is included as:
-
-```text
-car_sales_dashboard.pbix
-```
-
-Open the file in Microsoft Power BI Desktop to inspect and interact with the report.
-
-The dashboard is the presentation layer of the project, while the notebook documents the data-cleaning logic separately for transparency and reproducibility.
-
----
-
-
-## Dashboard pages
-
-The Power BI report contains two main pages.
+## Dashboard Pages
 
 ### 1. Dashboard
 
-The main analytical page brings together:
+The main analytical page includes:
 
 - **Top Selling Brands**
 - **Sales Distribution by Price Category**
@@ -74,13 +48,13 @@ The main analytical page brings together:
 - **Fuel Efficiency vs Car Price**
 - **Engine Size vs Horsepower**
 - **Car Price vs 4-Year Resale Value**
-- interactive manufacturer and age-group filtering
+- manufacturer and age-group filtering
 
-The current report shows Ford as the leading brand by both sales and revenue, while the price-category view indicates that most represented sales fall within the low- and medium-price bands.
+Together, these visuals support comparisons across sales performance, revenue, pricing, efficiency, vehicle characteristics, resale value, and customer segments.
 
 ### 2. KPI Summary
 
-The KPI page summarizes the overall portfolio with three headline measures:
+The KPI page presents three headline measures:
 
 | KPI | Dashboard value |
 |---|---:|
@@ -88,13 +62,13 @@ The KPI page summarizes the overall portfolio with three headline measures:
 | Total Revenue | 181.53M |
 | Average Car Price | 27.33K |
 
-The page also includes a short narrative interpretation of these measures for business users.
+A short narrative section beneath the KPI cards interprets the headline figures for business users.
 
 ---
 
-## Business questions explored
+## Business Questions Explored
 
-The dashboard is designed to help answer questions such as:
+The dashboard helps answer questions such as:
 
 - Which manufacturers contribute the highest sales volume?
 - Which brands generate the most revenue?
@@ -106,9 +80,9 @@ The dashboard is designed to help answer questions such as:
 
 ---
 
-## Data preparation workflow
+## Data Preparation Workflow
 
-The cleaned notebook preserves the core preparation steps from the original analysis.
+The notebook preserves the core preparation logic used in the project.
 
 ### 1. Load the source dataset
 
@@ -148,8 +122,6 @@ The workflow converts these columns to numeric values:
 
 Missing values in the numeric fields are filled using the **median of the corresponding column**.
 
-Median imputation was retained from the original project because it provides a simple and reproducible way to complete the dataset without allowing extreme values to dominate the replacement value.
-
 ### 5. Create price categories
 
 A derived `Price Category` field groups vehicles into:
@@ -162,41 +134,69 @@ A derived `Price Category` field groups vehicles into:
 
 ### 6. Export the cleaned dataset
 
-The notebook can write the prepared table to:
+The notebook can write the prepared dataset to:
 
 ```text
 data/car_sales_cleaned.csv
 ```
 
-which can then be loaded into Power BI.
+for loading into Power BI.
 
 ---
 
-## Running the notebook
+## Repository Structure
 
-Create a Python environment and install:
+```text
+Car-sales-Bi-Dashboard/
+├── data/
+│   └── README.md
+├── notebooks/
+│   └── car_sales_data_preparation.ipynb
+├── .gitignore
+├── LICENSE
+├── README.md
+├── car_sales_dashboard.pbix
+├── dashboard_overview.png
+└── requirements.txt
+```
+
+---
+
+## Run the Data Preparation Notebook
+
+Install the Python dependencies:
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-Place the source file at:
+Place the source dataset at:
 
 ```text
 data/Car_sales.csv
 ```
 
-Then open:
+Then open and run:
 
 ```text
 notebooks/car_sales_data_preparation.ipynb
 ```
 
-and run the cells in order.
+---
+
+## Power BI Report
+
+The final report is included as:
+
+```text
+car_sales_dashboard.pbix
+```
+
+Open it in **Microsoft Power BI Desktop** to interact with the report, filters, and KPI page.
 
 ---
 
-## Dataset note
+## Dataset Note
 
 The raw CSV is not redistributed in this repository because the original dataset source and redistribution terms have not yet been documented.
 
@@ -204,24 +204,24 @@ See [data/README.md](data/README.md) for the expected schema.
 
 ---
 
-## Skills demonstrated
-
-This project demonstrates:
+## Skills Demonstrated
 
 - Power BI dashboard development
 - business-intelligence reporting
+- dashboard and KPI design
 - Python data cleaning
 - pandas and NumPy
 - missing-value treatment
 - feature engineering
+- customer segmentation analysis
 - analytical dataset preparation
-- translating data into business-oriented reporting
+- business-oriented data storytelling
 
 ---
 
-## Portfolio role
+## Portfolio Role
 
-This project complements the machine-learning and computer-vision projects in the portfolio by demonstrating a different capability: **business intelligence and decision-support analytics**.
+This project demonstrates **Business Intelligence and Data Analytics**, complementing the machine-learning, computer-vision, software, and geospatial work in the wider portfolio.
 
 ---
 
