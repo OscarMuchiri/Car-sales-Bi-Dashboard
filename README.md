@@ -57,6 +57,55 @@ The dashboard is the presentation layer of the project, while the notebook docum
 
 ---
 
+
+## Dashboard pages
+
+The Power BI report contains two main pages.
+
+### 1. Dashboard
+
+The main analytical page brings together:
+
+- **Top Selling Brands**
+- **Sales Distribution by Price Category**
+- **Top Revenue Generating Brands**
+- **Models by Fuel Efficiency**
+- **Brand Preferences Across Customer Age Groups**
+- **Fuel Efficiency vs Car Price**
+- **Engine Size vs Horsepower**
+- **Car Price vs 4-Year Resale Value**
+- interactive manufacturer and age-group filtering
+
+The current report shows Ford as the leading brand by both sales and revenue, while the price-category view indicates that most represented sales fall within the low- and medium-price bands.
+
+### 2. KPI Summary
+
+The KPI page summarizes the overall portfolio with three headline measures:
+
+| KPI | Dashboard value |
+|---|---:|
+| Total Sales Volume | 8.32M |
+| Total Revenue | 181.53M |
+| Average Car Price | 27.33K |
+
+The page also includes a short narrative interpretation of these measures for business users.
+
+---
+
+## Business questions explored
+
+The dashboard is designed to help answer questions such as:
+
+- Which manufacturers contribute the highest sales volume?
+- Which brands generate the most revenue?
+- How are sales distributed across low-, medium-, and high-price categories?
+- How does fuel efficiency vary across vehicle models and prices?
+- What relationship exists between engine size and horsepower?
+- How does vehicle price compare with four-year resale value?
+- How do manufacturer preferences vary across customer age groups?
+
+---
+
 ## Data preparation workflow
 
 The cleaned notebook preserves the core preparation steps from the original analysis.
